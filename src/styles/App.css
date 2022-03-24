@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  grid-template: auto 1fr / 1fr auto;
+
+  /* height: 100vh; */
+  width: 100vw;
+  min-width: 970px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+/*************************************************HEADER***********************************************/
+
+header {
+  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 1440px;
+
+  position: -webkit- sticky;
+  position: fixed;
+  z-index: 100;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.navBar ul {
+  list-style-type: none;
+}
+
+.navBar ul li {
+  display: inline;
+}
+
+.leftNav li:first-child {
+  padding: 0 50px 0 0;
+}
+
+.rightNav li:last-child {
+  padding: 0 0 0 250px;
+}
+
+/*****************************************************MAIN*******************************************/
+
+main {
+  margin-top: 100px;
+  margin-right: 240px;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.landingPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.intro {
+  /* width: 80%; */
+  /* position: fixed; */
+  width: 100%;
+  margin-bottom: 40px;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+.intro p {
+  white-space: normal;
+  width: 75%;
+  position: fixed;
+
+  overflow-wrap: break-word;
+  overflow-wrap: break-all;
+  text-align: left;
+}
+
+.jobs {
+  /* position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template: auto / repeat(3, 1fr);
+
+  /* justify-content: center; */
+}
+
+.company {
+  background-color: grey;
+  height: 200px;
+  width: 300px;
+
+  margin: 10px;
+  /* position: absolute; */
+  z-index: 10;
+}
+
+.a {
+  /* left: 0;
+  top: 100px; */
+
+  margin: 100px 0 0 50px;
+
+  width: 23%;
+  max-width: 230px;
+  height: 366px;
+}
+
+.b {
+  /* left: 0%;
+  top: 49px; */
+
+  margin: 0 0 0 25px;
+
+  width: 25%;
+  max-width: 250px;
+  height: 300px;
+}
+
+.c {
+  /* left: 66%;
+  top: 100px; */
+
+  margin: 70px 0 0 50px;
+
+  width: 33%;
+  max-width: 320px;
+  height: 332px;
+}
+
+.d {
+  /* left: 0;
+  top: 500px; */
+
+  margin: 50px 50px 0 20px;
+
+  width: 23%;
+  max-width: 220px;
+  height: 332px;
+}
+
+.e {
+  /* left: 33%;
+  top: 400px; */
+
+  margin: -100px 0 0 20px;
+
+  width: 27%;
+  max-width: 270px;
+  height: 150px;
+}
+
+.f {
+  /* left: 66%;
+  top: 400px; */
+
+  margin: -20px 0 0 40px;
+
+  width: 33%;
+  max-width: 320px;
+  height: 175px;
+}
+
+.g {
+  margin: -270px 30px 0 10px;
+
+  width: 27%;
+  max-width: 260px;
+  height: 300px;
+}
+
+.h {
+  margin: -200px 0 0 570px;
+
+  width: 32%;
+  max-width: 310px;
+  height: 275px;
+}
+
+.i {
+  /* background-color: red; */
+  margin: -50px 0 0 60px;
+
+  width: 25%;
+  max-width: 270px;
+  height: 275px;
+}
+
+.j {
+  /* background-color: red; */
+  margin: 25px 0 0 30px;
+
+  width: 30%;
+  max-width: 290px;
+  height: 150px;
+}
+
+.k {
+  /* background-color: red; */
+  margin: 75px 0 0 30px;
+
+  width: 26%;
+  max-width: 250px;
+  height: 300px;
+}
+
+.l {
+  background-color: red;
+  margin: -120px 0 0 40px;
+
+  width: 26%;
+  max-width: 270px;
+  height: 250px;
+}
+
+/**************************************************FOOTER**********************************************/
+footer {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+
+  /* position: fixed;
+  right: 0;
+  top: 100px; */
+  width: 250px;
+  /* position: relative; */
+}
+
+.linkedin {
+  display: block;
+}
+
+.email {
+  display: block;
+}
+
+.info {
+  position: fixed;
+  top: 275px;
+}
