@@ -20,7 +20,6 @@ const LandingPage = () => {
       <JobCard name={'j'}/>
       <JobCard name={'k'}/>
       <JobCard name={'l'}/>
-
       </div>
     </div>
   )
