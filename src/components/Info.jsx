@@ -2,25 +2,26 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='info'>
-      <hr></hr>
-      <div>
-      <h4>Office and unoffical roles</h4>
-      <ol>
-        <li>Head of Design</li>
-        <li>Product Designer</li>
-        <li>Visual Designer</li>
-        <li>Interaction Designer</li>
-        <li>UX Designer</li>
-        <li>Project Manager</li>
-      </ol>
+    <div className="info">
+      <div className="info-content">
+        <h4>Office and unoffical roles</h4>
+        <div>
+          <ol>
+            <li>Head of Design</li>
+            <li>Product Designer</li>
+            <li>Visual Designer</li>
+            <li>Interaction Designer</li>
+            <li>UX Designer</li>
+            <li>Project Manager</li>
+          </ol>
+        </div>
       </div>
-      <hr></hr>
-      <div>
-        <span className='linkedin'>linkedin.com/in/cindybleong</span>
-        <span className='email'>hello@cindyleong.me</span>
+
+      <div className="contact">
+        <div className="linkedin">linkedin.com/in/cindybleong</div>
+        <div className="email">hello@cindyleong.me</div>
       </div>
-      </div>
+    </div>
   )
 }
 
