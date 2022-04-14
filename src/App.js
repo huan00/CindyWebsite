@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import Nav from './pages/Nav'
 import Info from './components/Info'
+import JobPage from './pages/JobPage'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/job/" element={<JobPage />} />
         </Routes>
       </main>
       <footer>

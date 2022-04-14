@@ -1,6 +1,22 @@
+import { faUserTimes } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
 
 const Nav = () => {
+  const [time, setTime] = useState('')
+  const [timeOfDay, setTimeOfDay] = useState('')
+  const [timeZone, setTimeZone] = useState(
+    new Date()
+      .toLocaleTimeString('en-us', { timeZoneName: 'short' })
+      .split(' ')[2]
+  )
+
+  useEffect(() => {
+    setInterval(() => {
+      setTime(getTime())
+      setTimeOfDay(getTimeOfDay())
+    }, 1000)
+  }, [])
+
   const getTime = () => {
     let time = new Date()
 
@@ -9,20 +25,18 @@ const Nav = () => {
       time.getMinutes() < 10
         ? String(time.getHours().toString().padStart(2, 0))
         : time.getMinutes()
-    let second =
-      time.getSeconds() < 10
-        ? String(time.getSeconds().toString().padStart(2, 0))
-        : time.getSeconds()
+    // let second =
+    //   time.getSeconds() < 10
+    //     ? String(time.getSeconds().toString().padStart(2, 0))
+    //     : time.getSeconds()
 
-    return hour + ':' + minute + ':' + second
+    return hour + ':' + minute //+ ':' + second
   }
-  const [time, setTime] = useState(getTime())
 
-  useEffect(() => {
-    setInterval(() => {
-      setTime(getTime())
-    }, 1000)
-  }, [time])
+  const getTimeOfDay = () => {
+    const time = new Date().getHours() > 12 ? 'PM' : 'AM'
+    return time
+  }
 
   return (
     <div className="navBar">
@@ -32,7 +46,7 @@ const Nav = () => {
       </ul>
       <ul className="rightNav">
         <li>Head of Design, Darwin Homes</li>
-        <li>{time}</li>
+        <li>{time + ' ' + timeOfDay + ' ' + timeZone}</li>
       </ul>
     </div>
   )
